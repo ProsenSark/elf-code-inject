@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#ARCH=x86
+
+set -x
+
+export LD_LIBRARY_PATH=$SYSROOT/usr/lib:$PWD:$LD_LIBRARY_PATH
+
+#./test
+#gdb ./test
+#valgrind --leak-check=full --show-reachable=yes ./test
+#valgrind --suppressions=$PWD/valgrind.supp --leak-check=full --show-reachable=yes ./test
+
+./eh_test
+#gdb ./eh_test
+#valgrind --leak-check=full --show-reachable=yes ./eh_test
+#valgrind --suppressions=$PWD/valgrind.supp --leak-check=full --show-reachable=yes ./eh_test
+
